@@ -1,14 +1,11 @@
-require 'pry'
-def key_for_min_value(hash)
-  smallest_key = nil 
-  smallest_value = nil 
-  hash.each do |key, value|
-    if smallest_value == nil || smallest_value > value 
-      smallest_value = value
-      smallest_key = key
+def key_for_min_value(name_hash)
+  lowest_key = nil 
+  lowest_value = nil 
+  name_hash.each do |item, amount|
+    if lowest_value == nil || lowest_value > amount 
+      lowest_key = item 
+      lowest_value = amount 
     end 
-  end 
-  smallest_key 
+  end
+  lowest_key
 end 
-
-#hash {:blake=>500, :ashley=>2, :adam=>1}
